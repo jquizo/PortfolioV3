@@ -1,0 +1,650 @@
+@import "./libraries/media-queries.scss";
+
+$font-stack1: 'Raleway','Times New Roman', Times, serif;
+$font-stack2: 'Roboto', 'Arial', 'sans-serif';
+$font-stack3: 'Open Sans', sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-stack1;
+    line-height: 1.6rem;
+    height:100vh;
+    overflow: hidden;
+}
+
+.container {
+    width:100%;
+    height:100%;
+    /* CSS Smooth scroll */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+// ---------- NAVBAR ----------
+.navbar {
+    position:fixed;
+    width: 100%;
+    height: 60px;
+    top:0;
+    z-index: 1;
+    display: flex;
+    background: rgba(255,255,255,0.1);
+    width: 100%;
+    // Phone size or smaller
+    @include media("<=phone") {
+        height: 110px;
+    }
+    // Bigger than phone, smaller than tablet
+    @include media ('>phone','<=tablet') {
+        height: 110px;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: center ;
+        margin: auto;
+            // Tablet size or smaller
+            @include media ("<=tablet") {
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+    }
+    li {
+        margin: 0 1rem;
+        padding: 1rem;
+        @include media("<=phone") {
+            margin: 4px;
+            padding: 10px;
+        }
+
+    }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #000000;
+    }
+    
+    a:hover {
+        color:#0077B5 ;
+    }
+}
+
+a.navbar-myname {
+    color: #333;
+}
+
+.navbar-myname {
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 6rem;
+
+    // Smaller than 850px
+    @include media("<=850px") {
+        display: none;
+    }
+    // // Bigger than phone, smaller than LGphone
+    // @include media ('>phone','<=LGphone') {
+    //    display: none;
+    // }
+    // // Bigger than phone, smaller than tablet
+    // @include media ('>phone','<=tablet') {
+    //     margin: 4px;
+    // }
+
+}
+
+// ----------SECTION BACKGROUNDS---------- 
+.myname {
+    background: url(../img/greece.jpg) no-repeat center center/cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.codingbackground {
+    height: 250px;
+    background: url(../img/coding.jpg) no-repeat center center/cover;
+    position: relative;
+    background-attachment: fixed;  
+    opacity: 0.7; 
+    &:hover {
+        opacity: 1.0;
+    }
+}
+
+.lightsbackground {
+    height: 250px;
+    background: url(../img/lights.jpg) no-repeat center center/cover;
+    position: relative;
+    background-attachment: fixed;  
+    opacity: 0.7; 
+    &:hover {
+        opacity: 1.0;
+    }
+}
+
+// ----------SECTIONS---------- 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+    h1 {
+        font-size: 3rem;
+        margin: 1rem;
+        @include media("<=phone") {
+           font-size: 2rem;
+        }
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+// ----------ABOUT SECTION---------- 
+.about {
+    background: whitesmoke;
+    height: 400px;
+}
+
+.aboutcontainer p {
+    width: 70vw;
+    font-size: 1.2rem;
+}
+
+// ----------TECHNOLOGY SECTION---------- 
+.technologies {
+    height: 560px;
+    // Phone size or smaller
+        @include media("<=phone") {
+        height: 650px;
+    }
+
+    h3 {
+        color: #333;
+    }
+}
+
+.icon-container {
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.programming {
+    width: 60px;
+    height: auto;
+    margin: 0.8rem;
+    // Phone size or smaller
+    @include media("<=phone") {
+        display: none;
+    }
+    // Bigger than phone, smaller than Large phone
+    @include media ('>phone','<=LGphone') {
+        display: none;
+    }
+}
+
+.skill-icon {
+    width:60px;
+    height: auto;
+    margin: 0.8rem;
+    // Phone size or smaller
+    @include media("<=phone") {
+        display: flex;
+        flex-wrap: wrap;
+        width: 76px;
+    }
+}
+
+#nodejs {
+    // Phone size or smaller
+    @include media("<=phone") {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100px;
+        margin-left: 20px;
+    }
+}
+
+// ----------PROJECTS SECTION---------- 
+
+.projects {
+    height: 550px;
+    font-family: $font-stack3;
+    font-size: 14px;
+        // Phone size or smaller
+        @include media("<=phone") {
+            height: 1100px;
+        }
+        // Bigger than phone, smaller than Large phone
+        @include media ('>phone','<=LGphone') {
+            height: 1100px;
+        }
+    
+    h1,h2,h3,h4,h5{
+        font-weight: 400;
+    }
+    h1 {
+        margin-top: -40px;
+        font-size: 40px;
+            //Smaller than 500px
+            @include media("<=LGphone") {
+                margin-top: 20px;
+            }
+    }
+    h3 {
+        color: #555;
+        margin: 3px 3px 8px 3px;
+        font-size: 20px;;
+    }
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-container  {
+    position: relative;
+    width: 200px;
+    height: auto;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding-top: 6px;
+    padding-left: 4px;
+    padding-right: 4px;
+}   
+
+.project-container:hover .text-overlay {
+    transform: scaleY(1);
+}
+
+.img-container {
+    position: relative;
+    
+}
+
+.img-container img {
+    max-width: 100%;   
+    transition: transform 1s;
+}
+
+.text-overlay {
+    font-family: $font-stack2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+
+.text-overlay a {
+    position: relative;
+    top:40%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    display:inline-block;
+    width:100%;
+    height:100%;    
+}
+
+// ----------CONTACT AND FOOTER SECTION ---------- 
+@mixin  easeIn {
+    transition: all 0.5s ease-in;
+}
+// ----------ONLY USE MIXIN IN THIS SECTION ---------- 
+
+.contact {
+    height: 350px;
+    background: whitesmoke;
+    font-weight: bold;
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+}
+
+.contact-container {
+    margin-bottom: 80px;
+}
+
+.contact-header {
+    margin-bottom: 1rem;
+}
+
+.contact-icon {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    font-size: 1.5rem;
+    line-height: 50px;
+    outline: 0;
+    color: rgba(255, 255, 255, 0.7);
+    background: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 4px;
+    margin-left: 12px;
+}
+
+.email {
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 10px;
+}
+
+#email-icon {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    font-size: 1.5rem;
+    line-height: 50px;
+    outline: 0;
+    color: rgba(255, 255, 255, 0.7);
+    background: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 8px;
+    cursor: pointer;
+    :hover {
+        @include easeIn;
+        color:coral;
+        
+    }
+}
+
+#github {
+
+    cursor: pointer;
+    :hover {
+        @include easeIn;
+        color: #0366d6;
+    }
+}
+
+#linkedin {
+
+    cursor: pointer;
+    :hover {
+        @include easeIn;
+        color: #0077B5  
+    }
+}
+
+.footer {
+    height: 60px;
+    p {
+        font-size: 1rem;
+    }
+}
+
+.icon-wrapper:hover {
+    transition-duration: 0.6s;
+    transform: translateY(-5px);
+}
+
+.icon-container {
+    display: flex;
+}
+
+// ----------MODAL AREA---------- 
+.modal {
+    font-family: $font-stack2;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 5vh; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */   
+                // Smaller than phone
+        @include media("<=phone") {
+            padding-top: 8vh;
+        }
+        // Bigger than phone, smaller than LGphone
+        @include media ('>phone','<=LGphone') {
+           padding-top: 10vh;
+        }
+        // Equal or larger than tablet, smaller than large tablet
+        @include media ('>=tablet','<=LGtablet') {
+            padding-top: 10vh;
+        }
+        // // Equal or larger than tablet, smaller than desktop
+        // @include media ('>=LGtablet','<=desktop') {
+            
+        // }
+}
+// ----------MODAL HEADER---------- 
+.modal-header {
+    padding: 2px 16px;
+    background-color: #555;
+    color: white;
+}
+
+.modal-header h2 {
+    margin: 10px;
+}
+// ----------MODAL X AT TOP BUTTON---------- 
+.close {
+    color: white;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+// ----------MODAL BODY---------- 
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 40px;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-body {
+    padding: 2px 16px;
+    // Bigger than phone, smaller than LGphone
+    @include media ('>phone','<=LGphone') {
+        height: auto;
+        overflow: auto;
+        }
+    // Equal or larger than tablet, smaller than large tablet
+    @include media ('>=tablet','<=LGtablet') {
+        height: auto;
+        overflow: auto;
+    }
+    // Equal or larger than tablet, smaller than large tablet
+    @include media ('>=LGtablet','<=desktop') {
+        height: auto;
+        overflow: auto;
+    }
+}
+
+.modal-body p {
+    text-align: center;
+    font-size: 15px;
+    margin: 4px;
+    // Phone size or smaller
+    @include media("<=LGphone") {
+        font-size: 1rem;
+    }
+    // Bigger than phone, smaller than LGphone
+    @include media ('>phone','<=LGphone') {
+        font-size: 1rem;
+        margin-top: 8px;
+    }
+    // Equal or larger than tablet, smaller than large tablet
+    @include media ('>=tablet','<=LGtablet') {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    // Equal or larger than large tablet, smaller than 1024px
+    @include media ('>=LGtablet','<=1024px') {
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.modal-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 70%;
+    height: auto;
+        // Smaller than phone
+        @include media("<=phone") {
+            width: 100%;
+        }
+        // Bigger than phone, smaller than LGphone
+        @include media ('>phone','<=LGphone') {
+            width: 100%;
+        }
+        // Equal or larger than tablet, smaller than large tablet
+        @include media ('>=tablet','<=LGtablet') {
+            width: 90%;
+        }
+        // Equal or larger than tablet, smaller than large tablet
+        @include media ('>=LGtablet','<=desktop') {
+            width: 90%;
+        }
+}
+
+.modalwarning {
+    color: red;
+}
+
+// ----------MODAL FOOTER ----------
+
+.modal-buttons {
+    margin: 10px;
+    padding: 3px;
+    font-size: 14px;
+    border-radius: 6px;
+        // Large Phone size or smaller
+        @include media("<=LGphone") {
+            margin: 8px;
+        }
+        // Bigger than tablet, smaller than 1024px
+        @include media ('>tablet','<=1024px') {
+            padding: 6px;
+        }
+    :hover {
+        cursor: pointer;
+    }
+}
+
+.modal-footer a {
+
+    :hover {
+        color: #0077B5;
+    }
+}
+
+.closebtn {
+    float: right;
+    margin-top: 8px;
+    border-radius: 6px;
+    padding: 3px;
+    // Large phone size or smaller
+        @include media("<=LGphone") {
+            float: none;
+        }
+        // Bigger than tablet, smaller than LGtablet
+        @include media ('>tablet','<=LGtablet') {
+            padding: 8px;
+        }
+        // Bigger than tablet, smaller than 950px
+        @include media ('>tablet','<=1024px') {
+            padding: 6px;
+        }
+    :hover {
+        cursor: pointer;
+        color: red;
+    }
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #555;
+    height: auto;
+    
+        // Large Phone size or smaller
+        @include media("<=LGphone") {
+            height: 60px;
+        }
+        // Smaller than 325px
+        @include media("<=325px") {
+            height: 90px;
+        }
+
+}
+
+.modal-footer a {
+    text-decoration: none;
+    :hover {
+        cursor: pointer;
+    }
+}
+
+.modal-footer i {
+    // Large phone size or smaller
+    @include media("<=LGphone") {
+        display: none;
+        }
+}
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+};
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
