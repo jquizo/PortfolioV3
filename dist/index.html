@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/bad18db414.js" crossorigin="anonymous"></script>
+    <!-- --GOOGLE FONTS-- -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a class="navbar-myname" href="#myname">Jason Requizo</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    <!-- -----------TOP SECTION----------- -->
+    <section class="myname" id="myname" >
+        <h1>Hi, I'm Jason</h1>
+        <p>Welcome to my portfolio!</p>
+    </section>
+    <!-- -----------ABOUT SECTION----------- -->
+    <section class="about" id="about">
+        <div class="aboutcontainer">
+            <i class="far fa-address-card fa-2x"></i><h1>About</h1>
+            <p>Hello! My name is Jason. I have an interest in computers and programming and I aspire toward a career in Front-end development. I am self-taught using resources such as Lynda.com, Youtube, reddit and Stack Overflow.</p>
+        </div>
+    </section>  
+    <!-- -----------TECHNOLOGY SECTION----------- -->
+    <section class="technologies" id="technologies">
+        <img src="icons/programming.png" class="programming"><h1>Technologies</h1>
+        <h3>What I have learned and used</h3>
+        <div class="icon-container">
+            <img src="icons/html.png" class="skill-icon" id="html" alt="html5" title="html5">
+            <img src="icons/css.png" class="skill-icon" id="css" alt="css3" title="css3">
+            <img src="icons/js.png" class="skill-icon" id="js" alt="javascript" title="Javascript">
+            <img src="icons/bootstrap.png" class="skill-icon" id="bootstrap" alt="bootstrap" title="Bootstrap">
+            <img src="icons/sass.png" class="skill-icon" id="sass" alt="sass" title="Sass">
+            <img src="icons/php.png" class="skill-icon" id="php" alt="php" title="PHP">
+            <img src="icons/wordpress.png" class="skill-icon" id="wordpress" alt="wordpress" title="Wordpress">
+            <img src="icons/github.png" class="skill-icon" id="github" alt="github" title="Github">
+        </div>
+        <div class="learning">
+        <h3>Currently learning</h3>
+        <img src="icons/node.png" class="skill-icon" id="nodejs" title="NodeJs">
+        </div>
+    </section>
+    <section class="codingbackground"></section>
+    <!-- -----------PROJECTS SECTION----------- -->
+    <section class="projects" id="projects">
+        <h1>Projects</h1>
+        
+        <h3>What I have made so far</h3>
+        <!-- PROJECT THUMBNAILS -->
+        <!-- THUMBNAIL 1  -->
+        <div class="thumbnail-container">
+            <div class="project-container">
+               <div class="img-container">
+                    <img src="/img/project1.png" href="#Modal1">
+               </div>
+               <div class="text-overlay">
+                    <a class="thumbnail-link" href="#Modal1">View Project <i class="fas fa-search-plus"></i></a>
+               </div>
+               Software List
+            </div>
+        <!-- THUMBNAIL 2  -->
+        <div class="thumbnail-container">
+            <div class="project-container">
+               <div class="img-container">
+                    <img src="/img/project2.png" href="#Modal2">
+               </div>
+               <div class="text-overlay">
+                    <a class="thumbnail-link" href="#Modal2">View Project <i class="fas fa-search-plus"></i></a>
+               </div>
+               Cake website
+            </div>
+        </div>
+        <!-- THUMBNAIL 3  -->
+        <div class="thumbnail-container">
+            <div class="project-container">
+               <div class="img-container">
+                    <img src="/img/project3.png" href="#Modal3">
+               </div>
+               <div class="text-overlay">
+                    <a class="thumbnail-link" href="#Modal3">View Project <i class="fas fa-search-plus"></i></a>
+               </div>
+               React weather App
+            </div>
+        </div>  
+        <!-- THUMBNAIL 4  -->
+        <div class="thumbnail-container">
+            <div class="project-container">
+               <div class="img-container">
+                    <img src="/img/project4.png" href="#Modal4">
+               </div>
+               <div class="text-overlay">
+                    <a class="thumbnail-link" href="#Modal4">View Project <i class="fas fa-search-plus"></i></a>
+               </div>
+               React Portfolio
+            </div>
+        </div>
+        <!-- THUMBNAIL 5  -->
+        <div class="thumbnail-container">
+            <div class="project-container">
+               <div class="img-container">
+                    <img src="/img/project5.png" href="#Modal5">
+               </div>
+               <div class="text-overlay">
+                    <a class="thumbnail-link" href="#Modal5">View Project <i class="fas fa-search-plus"></i></a>
+               </div>
+               Cake website V2
+            </div>
+            
+        </div>
+
+        <!-- THUMBNAIL CONTAINER END -->
+        </div> 
+        <!-- -----------MODAL 1----------- -->
+        <div id="Modal1" class="modal">
+        <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                <span class="close">×</span>
+                <h2>Software List</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <img src="img/project1.png" class="modal-img projectimg1">  
+                        <p class="modalwarning">WARNING - Not responsive. View only on desktop computers</p>                   
+                        <p>First website I ever made. List containing free useful software. Made using HTML, CSS and JavaScript for the sidebar.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">  
+                    <a href="https://jquizo.github.io/Useful_softwarelist/" target="_blank">
+                        <button class="modal-buttons">View project <i class="fas fa-eye"></i></button>
+                    </a>
+                    <a href="https://github.com/jquizo/Useful_softwarelist" target="_blank">
+                        <button class="modal-buttons">View source <i class="fab fa-github"></i></button>
+                    </a>
+                    <button class="closebtn"><span> Close</span></button>
+                </div>
+            </div>
+        </div>
+        <!-- -----------MODAL 2----------- -->
+        <!-- The Modal -->
+        <div id="Modal2" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>Cake Website</h2>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/project2.png"  class="modal-img projectimg2">                     
+                        <p>Cake website I made for my sister, made using a Bootstrap theme.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://jquizo.github.io/Sweet_merchant/" target="_blank">
+                            <button class="modal-buttons">View project <i class="fas fa-eye"></i></button>
+                        </a>
+                        <a href="https://github.com/jquizo/Sweet_merchant" target="_blank">
+                            <button class="modal-buttons">View source <i class="fab fa-github"></i></button>
+                        </a>
+                        <button class="closebtn"><span> Close</span></button>
+                    </div>
+                </div>
+        </div>
+        <!-- -----------MODAL 3----------- -->
+        <div id="Modal3" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>React Weather App</h2>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/project3.png"  class="modal-img projectimg3"> 
+                        <p class="modalwarning">WARNING - Not responsive. View only on desktop computers.</p>
+                        <p> (Was still learning about responsive websites at the time).</p>                     
+                        <p>Minimalistic weather application made with React. Uses openweathermaps API.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="https://jquizo.github.io/react-weatherapp/" target="_blank">
+                            <button class="modal-buttons">View project <i class="fas fa-eye"></i></button>
+                        </a>
+                        <a href="https://github.com/jquizo/react-weatherapp" target="_blank">
+                            <button class="modal-buttons">View source <i class="fab fa-github"></i></button>
+                        </a>
+                        <button class="closebtn"><span>Close</span></button>
+                    </div>
+                </div>
+            </div>
+        <!-- -----------MODAL 4----------- -->
+        <!-- The Modal -->
+        <div id="Modal4" class="modal">
+        <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                <span class="close">×</span>
+                <h2>React Portfolio</h2>
+                </div>
+                <div class="modal-body">
+                    <img src="img/project4.png"  class="modal-img projectimg4">                   
+                    <p>A portfolio made with React. React was probably not the best choice but I used it as I wanted to learn it.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://jquizo.github.io/portfolio/#/" target="_blank">
+                        <button class="modal-buttons">View project <i class="fas fa-eye"></i></button>
+                    </a>
+                    <a href="https://github.com/jquizo/portfolio" target="_blank">
+                        <button class="modal-buttons">View source <i class="fab fa-github"></i></button>
+                    </a>
+                    <button class="closebtn"><span>Close</span></button>
+                </div>
+            </div>
+        </div>
+        <!-- -----------MODAL 5----------- -->
+        <!-- The Modal -->
+        <div id="Modal5" class="modal">
+        <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                <span class="close">×</span>
+                <h2>Cake website V2</h2>
+                </div>
+                <div class="modal-body">
+                    <img src="img/project5.png"  class="modal-img projectimg5">                   
+                    <p>Updated cake website for my sister. No frameworks used this time and uses a simple lightbox for the gallery.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://jquizo.github.io/Sweet.Merchant/" target="_blank">
+                        <button class="modal-buttons">View project <i class="fas fa-eye"></i></button>
+                    </a>
+                    <a href="https://github.com/jquizo/Sweet.Merchant" target="_blank">
+                        <button class="modal-buttons">View source <i class="fab fa-github"></i></button>
+                    </a>
+                    <button class="closebtn"><span>Close</span></button>
+                </div>
+            </div>
+        </div>
+        </section>
+    <section class="lightsbackground"></section>
+    <!-- -----------CONTACT SECTION----------- -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="contact-header">Contact me!</h2>
+            <!-- -----------EMAIL ICON----------- --> 
+            <div class="icon-wrapper">
+            <p class="email">
+                <a id="email-icon" class="contact-icon" href="mailto:jason.req@gmail.com" target="_blank">
+                <i class="far fa-envelope fa-lg"></i>
+                </a>
+                <span>jason.req@gmail.com</span>
+            </p>
+            </div>
+            <div class="icon-container">
+            <!-- -----------GITHUB ICON----------- --> 
+            <div id="github" class="icon-wrapper">
+                <a class="contact-icon" href="https://github.com/jquizo" target="_blank" alt='github'>
+                    <i class="fab fa-github fa-lg"  ></i>
+                </a>
+                Github
+            </div>
+            <!-- -----------LINKEDIN ICON----------- -->
+            <div id="linkedin" class="icon-wrapper">
+                <a  class="contact-icon" href="https://au.linkedin.com/in/jason-requizo-b362a8124" target="_blank" alt="linkedin">
+                    <i class="fab fa-linkedin-in fa-lg"></i>
+                </a>
+                LinkedIn
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+                <div><p> &copy; Jason Requizo <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script> 
+    </section>
+    <!-- END OF CONTAINER DIV FROM TOP -->
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
