@@ -155,11 +155,16 @@ section {
 .about {
     background: whitesmoke;
     height: 400px;
+        // Phone size or smaller
+        @include media("<=phone") {
+            height: 600px;
+        }
 }
 
 .aboutcontainer p {
     width: 70vw;
     font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 // ----------TECHNOLOGY SECTION---------- 
