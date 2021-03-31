@@ -222,6 +222,23 @@ section {
         @include media ('>phone','<=LGphone') {
             height: 1600px;
         }
+
+        // Smaller than 400px
+        @include media("<=400px") {
+            height: 1650px;
+        }
+
+        // Bigger than 400px, smaller than 1024px
+        @include media ('>=400px','<=1024px') {
+            height: 1650px;
+        }
+
+        // Bigger than 768px, smaller than 1024px
+            @include media ('>=768px','<=1024px') {
+                height: 800px;
+            }
+
+ 
     
     h1,h2,h3,h4,h5{
         font-weight: 400;
